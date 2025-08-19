@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desa Jatimulya - Kec. Rangkasbitung, Kab. Lebak, Banten</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary-dark: #1a365d;
+      --primary-medium: #2c5282;
+      --primary-light: #4299e1;
+      --accent: #ecc94b;
+      --light: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f7fafc;
+      color: #2d3748;
+      overflow-x: hidden;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      color: white;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .header-scrolled {
+      background-color: rgba(26, 54, 93, 0.95);
+      backdrop-filter: blur(5px);
+      padding: 10px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      padding: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section with Black Smoke Effect */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+        url('img/desa.jpg.jpg') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInHero 1.5s ease-in-out;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Subtle fade-in */
+    @keyframes fadeInHero {
+      0% {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--accent);
+      color: var(--primary-dark);
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid var(--accent);
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(236, 201, 75, 0.3);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      margin-left: 15px;
+    }
+
+    .btn-outline:hover {
+      background-color: white;
+      color: var(--primary-dark);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Section Common Styles */
+    .section {
+      padding: 5rem 5%;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 4rem;
+      position: relative;
+      color: var(--primary-dark);
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Profile Section */
+    .profile {
+      background-color: white;
+    }
+
+    .profile-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .profile-image {
+      flex: 1;
+      min-width: 300px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.5s ease;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.03);
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .profile-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .profile h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-medium);
+    }
+
+    .profile p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+
+    /* Visi Misi Section */
+    .visi-misi {
+      background-color: #f7fafc;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visi-misi-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .visi-container,
+    .misi-container {
+      flex: 1;
+      min-width: 300px;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .visi-container:hover,
+    .misi-container:hover {
+      transform: translateY(-10px);
+    }
+
+    .visi-title,
+    .misi-title {
+      font-size: 1.5rem;
+      color: var(--primary-medium);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .visi-icon,
+    .misi-icon {
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+
+    .visi-text,
+    .misi-item {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      color: #4a5568;
+    }
+
+    /* Potensi Section */
+    .potensi {
+      background-color: white;
+    }
+
+    .potensi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .potensi-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .potensi-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .potensi-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .potensi-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .potensi-card:hover .potensi-image img {
+      transform: scale(1.1);
+    }
+
+    .potensi-content {
+      padding: 1.5rem;
+    }
+
+    .potensi-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-dark);
+    }
+
+    .potensi-desc {
+      color: #4a5568;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Wisata Section */
+    .wisata {
+      background-color: #f7fafc;
+    }
+
+    .wisata-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .slides-container {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide-image {
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(26, 54, 93, 0.9), transparent);
+      color: white;
+    }
+
+    .slide-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .slide-desc {
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+      z-index: 10;
+    }
+
+    .slider-btn {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: var(--primary-dark);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .slider-btn:hover {
+      background-color: white;
+      transform: scale(1.1);
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 1.5rem;
+    }
+
+    .slider-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #cbd5e0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .slider-dot.active {
+      background-color: var(--primary-dark);
+      transform: scale(1.2);
+    }
+
+    /* UMKM Section */
+    .umkm {
+      background-color: white;
+    }
+
+    .umkm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .umkm-card {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .umkm-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .umkm-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .umkm-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .umkm-card:hover .umkm-image img {
+      transform: scale(1.1);
+    }
+
+    .umkm-content {
+      padding: 1.5rem;
+    }
+
+    .umkm-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-dark);
+    }
+
+    .umkm-desc {
+      color: #4a5568;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .umkm-contact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary-medium);
+      margin-top: 1rem;
+    }
+
+    /* Galeri Section */
+    .galeri {
+      background-color: #f7fafc;
+    }
+
+    .galeri-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .galeri-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      aspect-ratio: 16/9;
+      transition: all 0.3s ease;
+    }
+
+    .galeri-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .galeri-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .galeri-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(26, 54, 93, 0.9), transparent);
+      color: white;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .galeri-item:hover .galeri-overlay {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-medium));
+      color: white;
+      padding: 4rem 5% 2rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .footer-logo-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .footer-logo-text span {
+      color: var(--accent);
+    }
+
+    .footer-desc {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background-color: var(--accent);
+      color: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+
+    .footer-title {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .footer-title:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 5px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      color: var(--accent);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 2rem;
+    }
+
+    /* 3D Elements */
+    .cube {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      transform-style: preserve-3d;
+      animation: rotateCube 20s infinite linear;
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(66, 153, 225, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+    }
+
+    .face-front {
+      transform: translateZ(50px);
+      background: rgba(66, 153, 225, 0.3);
+    }
+
+    .face-back {
+      transform: rotateY(180deg) translateZ(50px);
+      background: rgba(26, 54, 93, 0.3);
+    }
+
+    .face-right {
+      transform: rotateY(90deg) translateZ(50px);
+      background: rgba(236, 201, 75, 0.3);
+    }
+
+    .face-left {
+      transform: rotateY(-90deg) translateZ(50px);
+      background: rgba(66, 153, 225, 0.3);
+    }
+
+    .face-top {
+      transform: rotateX(90deg) translateZ(50px);
+      background: rgba(26, 54, 93, 0.3);
+    }
+
+    .face-bottom {
+      transform: rotateX(-90deg) translateZ(50px);
+      background: rgba(236, 201, 75, 0.3);
+    }
+
+    .cube-1 {
+      top: 20%;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      animation-duration: 25s;
+    }
+
+    .cube-2 {
+      bottom: 15%;
+      right: 10%;
+      width: 120px;
+      height: 120px;
+      animation-duration: 30s;
+      animation-direction: reverse;
+    }
+
+    .cube-3 {
+      top: 60%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rotateCube {
+      from {
+        transform: rotateX(0) rotateY(0);
+      }
+
+      to {
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: rgba(26, 54, 93, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: left 0.3s ease;
+      }
+
+      .nav-links.active {
+        left: 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .slide-image {
+        height: 400px;
+      }
+
+      .slide-title {
+        font-size: 1.5rem;
+      }
+
+      .cube {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 3D Elements -->
+  <div class="cube cube-1">
+    <div class="face face-front"></div>
+    <div class="face face-back"></div>
+    <div class="face face-right"></div>
+    <div class="face face-left"></div>
+    <div class="face face-top"></div>
+    <div class="face face-bottom"></div>
+  </div>
+
+  <div class="cube cube-2">
+    <div class="face face-front"></div>
+    <div class="face face-back"></div>
+    <div class="face face-right"></div>
+    <div class="face face-left">JTM</div>
+    <div class="face face-top"></div>
+    <div class="face face-bottom"></div>
+  </div>
+
+  <div class="cube cube-3">
+    <div class="face face-front"></div>
+    <div class="face face-back"></div>
+    <div class="face face-right"></div>
+    <div class="face face-left"></div>
+    <div class="face face-top"></div>
+    <div class="face face-bottom"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-text">Desa<span> Jatimulya</span></span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#profile">Profil</a></li>
+        <li><a href="#peta">Peta</a></li>
+        <li><a href="#visimisi">Visi Misi</a></li>
+        <li><a href="#wilayah">Wilayah</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#potensi">Potensi</a></li>
+        <li><a href="#wisata">Wisata</a></li>
+        <li><a href="#umkm">UMKM</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="hero-title">Selamat Datang di Desa Jatimulya</h1>
+      <p class="hero-subtitle">Kec. Rangkasbitung, Kab. Lebak, Provinsi Banten</p>
+      <div class="hero-btns">
+        <a href="#profile" class="btn">Explore Desa Kami</a>
+        <a href="#wisata" class="btn btn-outline">Temukan Wisata</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll Down Indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
+    <a href="#profile" class="text-white">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+  </div>
+  </section>
+
+  <!DOCTYPE html>
+  <html lang="id">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil Desa Jatimulya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        background: #f9f9ff;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1e3a8a;
+        margin-bottom: 50px;
+      }
+
+      .profile-block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 60px;
+        gap: 30px;
+      }
+
+      .profile-block.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .profile-image {
+        flex: 1 1 40%;
+        min-width: 280px;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease;
+      }
+
+      .profile-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+        transition: transform 0.5s ease;
+      }
+
+      .profile-image:hover img {
+        transform: scale(1.05);
+      }
+
+      .profile-text {
+        flex: 1 1 55%;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #444;
+        animation: fadeInUp 1.2s ease-out;
+      }
+
+      .profile-text h3 {
+        font-size: 1.5rem;
+        color: #1e3a8a;
+        margin-bottom: 16px;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 768px) {
+        .profile-block {
+          flex-direction: column;
+        }
+
+        .profile-block.reverse {
+          flex-direction: column;
+        }
+
+        .profile-text {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Profile Section -->
+    <section class="selection profile bg-gray-100" id="profile">
+      <div class="container">
+        <h2 class="section-title">Profil Desa Jatimulya</h2>
+
+        <!-- Block 1 -->
+        <div class="profile-block" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/jalansantai.JPG" alt="Kantor Desa Jatimulya" />
+          </div>
+          <div class="profile-text">
+            <p>Desa Jatimulya merupakan salah satu desa dalam wilayah Kecamatan Rangkasbitung, Kabupaten Lebak. Terletak
+              di titik kordinat Lat S -6° 21’ ” Long E 106° 16’ “ LU -6.352133 dan LS 106.266687.</p>
+            <p>Secara administratif, wilayah Desa Jatimulya memiliki batas sebagai berikut:</p>
+            <ul>
+              <li>• Sebelah Utara : Kelurahan Cijoro Pasir, Kecamatan Rangkasbitung</li>
+              <li>• Sebelah Selatan : Desa Rangkasbitung Timur, Kecamatan Rangkasbitung</li>
+              <li>• Sebelah Timur : Desa Narimbang Mulia, Kecamatan Rangkasbitung</li>
+              <li>• Sebelah Barat : Kelurahan Muara Ciujung Timur, Kecamatan Rangkasbitung</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="divider-blue"></div>
+
+        <!-- Block 2 -->
+        <div class="profile-block reverse" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/alatpeneburpupuk.JPG" alt="Peta Wilayah Desa" />
+          </div>
+          <div class="profile-text">
+            <p>Luas wilayah Desa Jatimulya adalah 183,73 Ha yang terdiri dari 80% berupa pemukiman, 20% berupa daratan
+              yang digunakan untuk lahan pertanian dll. Sebagaimana wilayah tropis, Desa Jatimulya mengalami musim
+              kemarau dan musim penghujan dalam tiap tahunnya. Rata-rata perbandingan musim kemarau lebih besar daripada
+              musim penghujan, hal itu disebabkan karena wilayah Desa Jatimulya merupakan wilayah pemukiman bukan
+              wilayah penghijauan/hutan lindung/pegunungan.</p>
+          </div>
+        </div>
+
+        <div class="divider-blue"></div>
+
+        <!-- Block 3 -->
+        <div class="profile-block" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/jalandesa.JPG" alt="Jalan Desa" />
+          </div>
+          <div class="profile-text">
+            <p>Jarak pusat desa dengan ibu kota kabupaten yang dapat ditempuh melalui perjalanan darat kurang lebih 1,5
+              km. Kondisi prasarana jalan poros desa yang berupa jalan konstruksi hotmix dengan kondisi baik apabila
+              tempuh menggunakan kendaraan bermotor mencapai kurang lebih 10 menit.</p>
+            <p>Sedangkan jarak pusat desa dengan ibu kota kecamatan kurang lebih 0,5 km. Ruas jalan hotmix yang dilalui
+              dalam kondisi baik dan dapat ditempuh kendaraan bermotor ±5 menit.</p>
+          </div>
+        </div>
+
+        <div class="divider-blue"></div>
+
+        <!-- Block 4 -->
+        <div class="profile-block reverse" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/airngalir.JPG" alt="Potensi Alam Desa" />
+          </div>
+          <div class="profile-text">
+            <p>Desa Jatimulya merupakan wilayah paling potensial untuk pengembangan ekonomi lokal serta pemanfaatan
+              sumber daya alam dan lingkungan secara berkelanjutan serta hal tersebut didukung oleh kondisi geografis
+              serta sistem mata pencaharian penduduk. Dukungan pemerintah daerah untuk pengembangan potensi diwujudkan
+              dengan menetapkan wilayah Desa Jatimulya sebagai bagian kegiatan perekonomian. Berdasarkan kondisi desa
+              ini maka akan dijabarkan permasalahan, potensi, hingga daftar Rencana Pembangunan Jangka Menengah Desa
+              (RPJMDes) yang diprogramkan untuk 6 (enam) tahun.</p>
+          </div>
+        </div>
+
+        <div class="divider-blue"></div>
+
+        <!-- Block 5 -->
+        <div class="profile-block" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/logosd1.JPG" alt="Sekolah Desa" />
+          </div>
+          <div class="profile-text">
+            <p>Secara Administratif, wilayah Desa Jatimulya terdiri dari 8 (delapan) Rukun Warga, dan 27 (dua puluh
+              tujuh) Rukun Tetangga.</p>
+            <p>Desa Jatimulya merupakan wilayah pemekaran pada tahun 1979 dari Desa Cijoro Pasir yang sekarang menjadi
+              Kelurahan Cijoro Pasir, pada tahun 1984 Desa Jatimulya dipekarkan menjadi 2 (dua) Desa dimana hasil
+              pemekarannya hingga sekarang diberi nama Desa Cimangeunteung, dan pada tahun 2010 juga dipekarkan kembali
+              menjadi 2 (dua) dan diberi nama Desa Narimbang Mulia.</p>
+            <p>Demografi adalah studi ilmiah tentang penduduk, terutama tentang jumlah, struktur dan perkembangannya.
+              Berdasarkan data profil desa, jumlah penduduk Desa Jatimulya tahun 2021 adalah 9.050 jiwa.</p>
+            <p>Adanya fasilitas pendidikan yang memadai serta pemahaman masyarakat tentang pentingnya menempuh
+              pendidikan formal maupun non formal mempengaruhi peningkatan taraf pendidikan. Agama, kebudayaan, adat
+              istiadat dan kebiasaan yang ada juga beragam.</p>
+          </div>
+        </div>
+
+        <div class="divider-blue"></div>
+
+        <!-- Block 6 -->
+        <div class="profile-block reverse" data-aos="fade-up">
+          <div class="profile-image">
+            <img src="img/baledesa.jpg" alt="Warga Desa" />
+          </div>
+          <div class="profile-text">
+            <p>Wilayah Desa Jatimulya memiliki berbagai potensi yang baik. Potensi tersebut dapat meningkatkan taraf
+              perekonomian dan pendapatan masyarakat. Disamping itu, lokasi yang relatif dekat dengan Ibukota Kabupaten
+              dan pusat kegiatan perekonomian, memberikan peluang kehidupan yang lebih maju dalam sektor formal maupun
+              non formal.</p>
+            <p>Pemerintah Desa Jatimulya dan Badan Permusyawaratan Desa selalu bersinergi dalam setiap hal pelaksanaan
+              kegiatan yang ada di Desa meliputi bidang Pemerintahan, Pembangunan, Kemasyarakatan dan Pemberdayaan
+              Masyarakat.</p>
+            <p>Wilayah Desa Jatimulya terbagi menjadi 8 RW dan 27 RT dan terdiri dari 13 kampung. Pusat Pemerintahan
+              Desa Jatimulya terletak di RW 005 tepatnya di Kp. Tb. Arum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+
+  </html>
+
+  <!-- Statistik Desa -->
+  <section class="w-full bg-gray-100 py-12">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Kartu 1 -->
+        <div
+          class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-xl sr-fade">
+          <div class="text-green-600 text-4xl mb-3 transform transition duration-300 hover:scale-110 hover:rotate-3">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <p class="text-gray-800 font-bold text-xl">183,73 Ha</p>
+          <p class="text-sm text-gray-500">Luas Wilayah</p>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div
+          class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-xl sr-fade">
+          <div class="text-green-600 text-4xl mb-3 transform transition duration-300 hover:scale-110 hover:rotate-3">
+            <i class="fas fa-users"></i>
+          </div>
+          <p class="text-gray-800 font-bold text-xl">9.050+ Jiwa</p>
+          <p class="text-sm text-gray-500">Populasi</p>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div
+          class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-xl sr-fade">
+          <div class="text-green-600 text-4xl mb-3 transform transition duration-300 hover:scale-110 hover:rotate-3">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <p class="text-gray-800 font-bold text-xl">25-32°C</p>
+          <p class="text-sm text-gray-500">Suhu Rata-Rata</p>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div
+          class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-md transform transition duration-300 hover:-translate-y-2 hover:shadow-xl sr-fade">
+          <div class="text-green-600 text-4xl mb-3 transform transition duration-300 hover:scale-110 hover:rotate-3">
+            <i class="fas fa-house-chimney"></i>
+          </div>
+          <p class="text-gray-800 font-bold text-xl">08/27</p>
+          <p class="text-sm text-gray-500">Jumlah RW/RT</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Font Awesome (ikon modern) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.sr-fade', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 800,
+      easing: 'ease-in-out',
+      interval: 100,
+      reset: false
+    });
+  </script>
+
+  <!-- Optional animation styles -->
+  <style>
+    @keyframes float3D {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .animate-float3D {
+      animation: float3D 6s ease-in-out infinite;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+    }
+  </style>
+
+  <!-- Custom Animation Styles -->
+  <style>
+    @keyframes float3D {
+
+      0%,
+      100% {
+        transform: translateY(0) rotateX(0deg) rotateY(0deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotateX(1deg) rotateY(1deg);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float3D {
+      animation: float3D 8s ease-in-out infinite;
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 1.5s ease-out forwards;
+    }
+  </style>
+
+  <!-- Peta Section -->
+  <section class="section peta" id="peta" style="padding: 0;">
+    <h2 class="section-title" style="text-align: center; padding-top: 2rem;">Peta Desa Jatimulya</h2>
+
+    <div
+      class="rounded-2xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer mx-auto max-w-6xl sr-fade"
+      style="width: 100vw;">
+      <img src="img/peta desa.png" alt="Peta Desa Jatimulya" class="w-full h-auto block" />
+    </div>
+    </div>
+  </section>
+
+  <!-- ScrollReveal CDN (tempel sebelum </body>) -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.sr-fade', {
+      duration: 1200,
+      distance: '50px',
+      origin: 'bottom',
+      easing: 'ease-in-out',
+      reset: false
+    });
+  </script>
+
+  <!-- Visi & Misi Section -->
+  <section class="section visimisi bg-gray-100" id="visimisi">
+    <div class="container">
+      <h2 class="section-title">Visi & Misi Desa Jatimulya</h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- VISI -->
+        <div
+          class="relative group bg-white border border-gray-200 p-8 rounded-3xl shadow-xl transition-transform transform hover:scale-105 hover:rotate-[0.5deg] hover:shadow-2xl hover:z-20">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-500 to-indigo-500 text-white text-2xl shadow-md">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800">Visi Desa</h3>
+          </div>
+          <p class="text-lg leading-relaxed text-gray-700">
+            Berdasarkan analisis terhadap kondisi obyektif dan potensi yang dimiliki Desa Jatimulya dengan
+            mempertimbangkan kesinambungan pembangunannya dan keselarasan visi misi pemerintah Kabupaten, maka visi Desa
+            Jatimulya tahun 2022-2027 adalah sebagai berikut :
+          </p>
+          <p class="mt-6 text-xl italic font-bold text-indigo-700 text-center">
+            “MEWUJUDKAN MASYARAKAT YANG AGAMIS, CERDAS, SEHAT DAN SEJAHTERA”
+          </p>
+        </div>
+
+        <!-- MISI -->
+        <div
+          class="relative group bg-white border border-gray-200 p-8 rounded-3xl shadow-xl transition-transform transform hover:scale-105 hover:-rotate-[0.5deg] hover:shadow-2xl hover:z-20">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-400 to-blue-500 text-white text-2xl shadow-md">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-800">Misi Desa</h3>
+          </div>
+          <ul class="list-disc list-inside space-y-3 text-lg text-gray-700 leading-relaxed">
+            <li>Meningkatkan kehidupan masyarakat Desa yang religius dan dinamis dalam segi keagamaan dan kebudayaan
+            </li>
+            <li>Mewujudkan tata kelola Pemerintahan Desa yang baik</li>
+            <li>Meningkatkan kualitas Pendidikan masyarakat Desa baik formal maupun non formal dengan program wajib
+              belajar</li>
+            <li>Meningkatkan kualitas dan daya saing SDM masyarakat Desa</li>
+            <li>Meningkatkan kualitas lingkungan hidup masyarakat Desa yang sehat</li>
+            <li>Meningkatkan mutu layanan Kesehatan di Desa melalui program Gerakan Desa Siaga Sehat</li>
+            <li>Meningkatkan Produktivitas ekonomi Desa melalui pengembangan usaha ekonomi masyarakat Desa dan Usaha
+              Ekonomi Desa</li>
+            <li>Mewujudkan pembangunan sarana dan prasarana Infrastruktur Desa yang memadai dan merata</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wilayah Section -->
+  <section class="section wilayah" id="wilayah">
+    <div class="container">
+      <h2 class="section-title">Wilayah Desa Jatimulya</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">
+        Berikut adalah data pembagian wilayah berdasarkan RW, RT, dan nama kampung di Desa Jatimulya.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-3xl shadow-2xl backdrop-blur-2xl bg-white/70 ring-2 ring-blue-300"
+      data-aos="zoom-in-up" data-aos-duration="1200">
+      <table class="min-w-full text-center text-base font-medium border-collapse">
+        <thead class="bg-blue-900 text-white text-lg">
+          <tr>
+            <th class="py-5 px-6 border border-white/50">RW</th>
+            <th class="py-5 px-6 border border-white/50">RT</th>
+            <th class="py-5 px-6 border border-white/50">NAMA KAMPUNG</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800 text-base">
+
+          <!-- RW 001 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="3" class="py-4 px-6 border font-semibold">001</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Babakan Anyar</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Kp. Babakan Anyar</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Kp. Babakan Anyar</td>
+          </tr>
+
+          <!-- RW 002 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="5" class="py-4 px-6 border font-semibold">002</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Ciseke</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Kp. Ciseke</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Kp. Ciseke</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">004</td>
+            <td class="py-4 px-6 border">Kp. Ciseke</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">005</td>
+            <td class="py-4 px-6 border">Kp. Ciseke</td>
+          </tr>
+
+          <!-- RW 003 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="3" class="py-4 px-6 border font-semibold">003</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Babakan Lurah Cihareno</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Kp. Babakan Lurah</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Kp. Babakan Lurah Ciapus</td>
+          </tr>
+
+          <!-- RW 004 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="2" class="py-4 px-6 border font-semibold">004</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Babakan Sepur</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Kp. Babakan Sepur</td>
+          </tr>
+
+          <!-- RW 005 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="3" class="py-4 px-6 border font-semibold">005</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Ciodeng</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Kp. Tb. Arum</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Kp. Tb. Arum</td>
+          </tr>
+
+          <!-- RW 006 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="3" class="py-4 px-6 border font-semibold">006</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Kp. Sukajadi</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Komp. Jatimulya</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Komp. Jatimulya / Pasir Kolecer</td>
+          </tr>
+
+          <!-- RW 007 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="5" class="py-4 px-6 border font-semibold">007</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">BTN Narimbang</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">BTN Narimbang</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">BTN Narimbang</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">004</td>
+            <td class="py-4 px-6 border">BTN Narimbang</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">005</td>
+            <td class="py-4 px-6 border">BTN Narimbang</td>
+          </tr>
+
+          <!-- RW 008 -->
+          <tr class="bg-blue-50 hover:scale-[1.01] transition-all duration-300 border-t-4 border-blue-400">
+            <td rowspan="3" class="py-4 px-6 border font-semibold">008</td>
+            <td class="py-4 px-6 border">001</td>
+            <td class="py-4 px-6 border">Griya Narimbang Asri</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">002</td>
+            <td class="py-4 px-6 border">Griya Narimbang Asri</td>
+          </tr>
+          <tr class="hover:bg-blue-100">
+            <td class="py-4 px-6 border">003</td>
+            <td class="py-4 px-6 border">Griya Narimbang Asri</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </section>
+
+ <!-- Layanan Section -->
+ <section class="section layanan bg-gray-100" id="layanan">
+  <div class="container">
+    <h2 class="section-title">Layanan Desa Jatimulya</h2>
+       
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Numpang Nikah -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-500 text-white text-2xl shadow-md">
+            <i class="fas fa-ring"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Numpang Nikah</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan berupa penerbitan surat pengantar numpang nikah bagi warga Desa Jatimulya sebagai syarat pencatatan pernikahan di KUA wilayah tujuan.
+        </p>
+      </article>
+
+      <!-- Domisili -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-blue-500 to-indigo-500 text-white text-2xl shadow-md">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Surat Keterangan Domisili</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Surat keterangan domisili ini diterbitkan oleh Pemerintah Desa Jatimulya sebagai bukti sah alamat tempat tinggal yang bersangkutan untuk keperluan administrasi dan kebutuhan resmi.
+        </p>
+      </article>
+
+      <!-- Surat Pindah Datang -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-white text-2xl shadow-md">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Surat Pindah Datang</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses pengurusan administrasi kependudukan bagi penduduk yang datang dan menetap dari luar daerah ke Desa Jatimulya.
+        </p>
+      </article>
+
+      <!-- Surat Pindah Pergi -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white text-2xl shadow-md">
+            <i class="fas fa-sign-out-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Surat Pindah Pergi</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses pengurusan administrasi kependudukan bagi penduduk yang melakukan perpindahan dari Desa Jatimulya ke daerah tujuan lain.
+        </p>
+      </article>
+
+      <!-- Kartu Keluarga (KK) -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-violet-500 to-purple-600 text-white text-2xl shadow-md">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Kartu Keluarga (KK)</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan yang meliputi penerbitan Kartu Keluarga baru, perubahan data, serta penambahan maupun pelepasan anggota keluarga.
+        </p>
+      </article>
+
+      <!-- KTP -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-cyan-500 to-sky-500 text-white text-2xl shadow-md">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Kartu Tanda Penduduk (KTP)</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan yang meliputi perekaman biometrik, penerbitan, serta perubahan data Kartu Tanda Penduduk Elektronik (KTP-el) bagi warga Desa Jatimulya.
+        </p>
+      </article>
+
+      <!-- Akta Kelahiran -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-lime-500 to-green-500 text-white text-2xl shadow-md">
+            <i class="fas fa-baby"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Akta Kelahiran</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan yang mencakup pencatatan kelahiran dan penerbitan kutipan Akta Kelahiran resmi bagi warga Desa Jatimulya.
+        </p>
+      </article>
+
+      <!-- Akta Kematian -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-slate-600 to-neutral-700 text-white text-2xl shadow-md">
+            <i class="fas fa-book-dead"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Akta Kematian</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan yang mencakup pencatatan peristiwa kematian dan penerbitan kutipan Akta Kematian resmi bagi warga Desa Jatimulya.
+        </p>
+      </article>
+
+      <!-- Surat Pindah -->
+      <article
+        class="relative group bg-white border border-slate-200 p-8 rounded-3xl shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div class="flex items-center gap-4 mb-5">
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-tr from-fuchsia-500 to-purple-500 text-white text-2xl shadow-md">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-800">Surat Pindah</h3>
+        </div>
+        <p class="text-slate-600 leading-relaxed">
+          Proses administrasi kependudukan yang meliputi penerbitan surat keterangan pindah antar RT/RW, Desa, atau Kecamatan berdasarkan permohonan warga Desa Jatimulya.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- potensi Section -->
+  <section class="section potensi bg-gray-100" id="potensi">
+    <div class="container">
+      <h2 class="section-title">Potensi Desa Jatimulya</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- potensi Card 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/pertanian.jpg" alt="Pertanian Singkong" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pertanian</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Lahan pertanian subur Pak Surip di Desa Jatimulya yang menghasilkan komoditas unggulan berupa singkong,
+              dikelola dengan sistem
+              pertanian berkelanjutan untuk mendukung ketahanan pangan dan kesejahteraan masyarakat.
+            </p>
+            <a href="https://wa.me/62895703127594" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- potensi Card 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/lele2.jpg" alt="Peternakan Ikan Lele" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Peternakan</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Peternakan ikan lele Pak Daman di Desa Jatimulya merupakan bagian dari program pengembangan ekonomi lokal.
+              Melalui sistem budidaya berkelanjutan, sektor ini mendukung ketahanan pangan dan mendorong peningkatan
+              pendapatan masyarakat.
+            </p>
+            <a href="https://wa.me/6283841147462" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- potensi Card 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/batik.jpg.jpg" alt="Batik" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Kerajinan Tangan</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Keberadaan Pak Dedi Haryadi di Desa Jatimulya selaku seniman lukis dan perajin batik lokal mencerminkan
+              kekayaan budaya Desa Jatimulya yang menjadi
+              warisan leluhur sekaligus memiliki potensi tinggi dalam ekonomi kreatif.
+            </p>
+            <a href="https://wa.me/6287762179898" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<!-- Wisata Section -->
+<section class="section wisata bg-gray-100" id="wisata">
+  <div class="container">
+    <h2 class="section-title">Wisata Desa Jatimulya</h2>
+
+    <div class="wisata-slider">
+      <div class="slides-container" id="slidesContainer">
+        <div class="slide">
+          <div class="slide-image">
+            <img src="img/goamaria.JPG" alt="gua maria wisata religi">
+          </div>
+          <div class="slide-overlay">
+            <h3 class="slide-title">Gua Maria Bukit Kanada</h3>
+            <p class="slide-desc">Tempat ziarah dan refleksi spiritual,
+              dikelilingi suasana alam yang damai dan mendukung kegiatan ibadah umat Katolik</p>
+            <a href="https://maps.app.goo.gl/nj3uXMtwpxhVru9h7?g_st=ic" class="btn btn-outline">Lokasi</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opsional: Jika hanya satu slide, navigasi bisa dihilangkan -->
+      <!-- <div class="slider-nav">
+        <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div class="slider-dots" id="sliderDots">
+        <div class="slider-dot active"></div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desa Jatimulya</title>
+
+  <!-- Font Awesome untuk ikon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reset margin */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* WhatsApp Button Style */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .whatsapp-float.clicked {
+      animation: clickBounce 0.5s ease;
+    }
+
+    @keyframes clickBounce {
+      0% {
+        transform: scale(1);
+      }
+
+      30% {
+        transform: scale(1.2);
+      }
+
+      50% {
+        transform: scale(0.9);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Tombol WhatsApp -->
+  <div class="whatsapp-float" id="whatsappBtn">
+    <i class="fab fa-whatsapp"></i>
+  </div>
+
+  <!-- Script untuk animasi klik dan redirect -->
+  <script>
+    const whatsappBtn = document.getElementById('whatsappBtn');
+
+    whatsappBtn.addEventListener('click', () => {
+      whatsappBtn.classList.add('clicked');
+
+      // Hapus animasi setelah selesai agar bisa diklik ulang
+      setTimeout(() => {
+        whatsappBtn.classList.remove('clicked');
+        window.open('https://wa.me/6285216463377', '_blank');
+      }, 300);
+    });
+  </script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk UMKM</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- UMKM Section -->
+  <section class="section umkm bg-gray-100" id="umkm">
+    <div class="container">
+      <h2 class="section-title">UMKM Desa Jatimulya</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- UMKM Card 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/keripik.jpg" alt="Keripik Tangkil" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Keripik Tangkil</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Keripik tangkil buatan ibu Oom Komariah yang renyah dengan varian original dan pedas, dibuat dari kulit
+              tangkil pilihan yang diolah
+              secara higienis dan berkualitas, cocok sebagai camilan khas desa.
+            </p>
+            <a href="https://wa.me/6283142893342" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- UMKM Card 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/batik.jpg.jpg" alt="Lukisan dan Batik" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Lukisan dan Batik</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Keberadaan Pak Dedi Haryadi di Desa Jatimulya selaku seniman lukis dan perajin batik lokal mencerminkan
+              kekayaan budaya Desa Jatimulya yang menjadi
+              warisan leluhur sekaligus memiliki potensi tinggi dalam ekonomi kreatif.
+            </p>
+            <a href="https://wa.me/6287762179898" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- UMKM Card 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="img/keripik gedang.jpg" alt="Keripik Gedang" class="w-full h-56 object-cover rounded-t-xl">
+          <div class="p-5">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Keripik Pisang</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Keripik pisang buatan ibu Ratna yang renyah dengan varian original, asin, dibuat dari pisang pilihan yang
+              diiris tipis dan digoreng secara higienis, cocok dinikmati di segala suasana.
+            </p>
+            <a href="https://wa.me/6287874727336" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-green-500 text-white font-medium px-4 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:bg-green-600">
+              <i class="fab fa-whatsapp text-xl drop-shadow-md"></i>
+              <span>Hubungi Kami</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<!-- Galeri Section -->
+<section class="section galeri bg-gray-100" id="galeri">
+  <div class="container">
+    <h2 class="section-title">Galeri KKM55 Jatimulya</h2>
+
+    <div class="galeri-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/seminarsd1.jpg" alt="Seminar SDN 1 Jatimulya">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/sosialisai.JPG" alt="sosialisasi">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/senamalun2.jpg" alt="Senam di alun alun Rangkasbitung">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/semiarsmp3.jpg" alt="Seminar di smpn 3 Rangkasbitung">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/seminarumkm.jpg" alt="Seminar UMKM">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+
+      <div class="galeri-item" style="width: 100%; height: auto;">
+        <img src="img/pengadilanagama.jpg" alt="Kunjungan ke pengadilan agama rangkasbitung">
+        <div class="galeri-overlay">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <span class="footer-logo-text">Desa<span> Jatimulya</span></span>
+        </div>
+
+        <p class="footer-desc">Desa Jatimulya, Kecamatan Rangkasbitung, Kabupaten Lebak, Provinsi Banten. Sebuah desa
+          dengan potensi besar dan masyarakat yang ramah.</p>
+
+        <div class="social-links">
+          <a href="https://www.tiktok.com/@desajatimulya28?_t=ZS-8y4HgCHI2St&_r=1" class="social-link"><i
+              class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/desa_jatimulya25?igsh=MXkxbDRnenR5cnlrdA%3D%3D&utm_source=qr"
+            class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@kkmkel.55jatimulya?si=JYAzNbLYX_a3wlxg" class="social-link"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://maps.app.goo.gl/F5Tk3oLU1XoFd51s7?g_st=ic" class="social-link"><i
+              class="fas fa-map-marker-alt"></i></a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=desa.jatimulya16@gmail.com" class="social-link" target="_blank">
+                <i class="fas fa-envelope"></i>
+              </a>              
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Menu Cepat</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#profile">Profil</a></li>
+          <li><a href="#peta">Peta</a></li>
+          <li><a href="#visimisi">Visi Misi</a></li>
+          <li><a href="#wilayah">Wilayah</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#potensi">Potensi</a></li>
+          <li><a href="#wisata">Wisata</a></li>
+          <li><a href="#umkm">UMKM</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Kontak Kami</h4>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+            <span>Jl. Nasional 11 No.48, Jatimulya, Kec. Rangkasbitung, Kabupaten Lebak, Banten 42315</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt contact-icon"></i>
+            <span>+62 852-1646-3377</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <span>desa.jatimulya16@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock contact-icon"></i>
+            <span>Senin - Jumat, Pukul 07.30 - 16.00 WIB (Istirahat Pukul 12.00 - 13.00 WIB)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2025 Desa Jatimulya. Seluruh Hak Cipta Dilindungi. | KKM55 Jatimulya - Universitas Bina Bangsa</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ?
+      '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+  });
+
+  // Header Scroll Effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  });
+
+  // Smooth Scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      }
+    });
+  });
+
+  // Image Slider
+  const slidesContainer = document.getElementById('slidesContainer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const sliderDots = document.getElementById('sliderDots').children;
+
+  let currentSlide = 0;
+  const slideCount = slidesContainer.children.length;
+
+  function updateSlider() {
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    // Update dots
+    for (let i = 0; i < sliderDots.length; i++) {
+      sliderDots[i].classList.toggle('active', i === currentSlide);
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide === 0) ? slideCount - 1 : currentSlide - 1;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1;
+    updateSlider();
+  });
+
+  // Initialize dots
+  for (let i = 0; i < sliderDots.length; i++) {
+    sliderDots[i].addEventListener('click', () => {
+      currentSlide = i;
+      updateSlider();
+    });
+  }
+
+  // Auto slide change
+  setInterval(() => {
+    currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1;
+    updateSlider();
+  }, 5000);
+
+  // Animation on scroll
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.section, .section-title, .profile-image, .visi-container, .misi-container, .potensi-card, .umkm-card, .galeri-item');
+
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementPosition < windowHeight - 100) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  }
+
+  // Set initial state
+  document.querySelectorAll('.section-title, .profile-image, .visi-container, .misi-container, .potensi-card, .umkm-card, .galeri-item').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(50px)';
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
+
+  setTimeout(() => {
+    animateOnScroll();
+  }, 500);
+
+  window.addEventListener('scroll', animateOnScroll);
+</script>
+</body>
+
+</html>
